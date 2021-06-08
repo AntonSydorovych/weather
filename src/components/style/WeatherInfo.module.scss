@@ -1,62 +1,64 @@
-.content {
-    background: black;
-    color: white;
-    .tempWrapper {
-        display: flex;
-        flex-direction: row;
-        width: 200px;
-        height: 100px;
-        margin-left: 55px;
-        .img {
-            width: 100px;
+.contentWrapper {
+    .content {
+        background: black;
+        color: white;
+        .tempWrapper {
+            display: flex;
+            flex-direction: row;
+            width: 200px;
             height: 100px;
-            img {
+            margin-left: 55px;
+            .img {
                 width: 100px;
                 height: 100px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .temp {
+                width: 100px;
+                height: 100px;
+                font-size: 32px;
+                .sky {
+                    margin-top: 15px;
+                    font-size: 20px;
+                }
             }
         }
-        .temp {
-            width: 100px;
-            height: 100px;
-            font-size: 32px;
-            .sky {
-                margin-top: 15px;
-                font-size: 20px;
+        .dataWrapper {
+            display: flex;
+            flex-direction: row;
+            .keys {
+                .wind {
+                    font-size: 32px;
+                    margin-top: 15px;
+                    margin-right: 30px;
+                }
+                .presure {
+                    font-size: 32px;
+                    margin-top: 15px;
+                }
+                .humidity {
+                    font-size: 32px;
+                    margin-top: 15px;
+                    margin-left: 25px;
+                }
             }
-        }
-    }
-    .dataWrapper {
-        display: flex;
-        flex-direction: row;
-        .keys {
-            .wind {
-                font-size: 32px;
-                margin-top: 45px;
-                margin-right: 30px;
-            }
-            .presure {
-                font-size: 32px;
-                margin-top: 45px;
-            }
-            .humidity {
-                font-size: 32px;
-                margin-top: 45px;
-                margin-left: 25px;
-            }
-        }
-        .values {
-            margin-left: 30px;
-            .wind {
-                font-size: 32px;
-                margin-top: 45px;
-            }
-            .presure {
-                font-size: 32px;
-                margin-top: 45px;
-            }
-            .humidity {
-                font-size: 32px;
-                margin-top: 45px;
+            .values {
+                margin-left: 30px;
+                .wind {
+                    font-size: 32px;
+                    margin-top: 15px;
+                }
+                .presure {
+                    font-size: 32px;
+                    margin-top: 15px;
+                }
+                .humidity {
+                    font-size: 32px;
+                    margin-top: 15px;
+                }
             }
         }
     }

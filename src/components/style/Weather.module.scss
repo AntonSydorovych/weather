@@ -1,11 +1,13 @@
 .main {
-    height: 500px;
-    max-width: 40%;
+//    height: 400px;
+    max-width: 380px;
+    min-width: 325px;
     background: rgb(211, 211, 211);
     margin: auto;
     border-radius: 40px;
+    border: 3px solid white;
     .weatherInfo {
-        height: 395px;
+        height: 300px;
         border-bottom-right-radius: 40px;
         border-bottom-left-radius: 40px;
         display: flex;

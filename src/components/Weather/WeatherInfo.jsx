@@ -3,9 +3,9 @@ import style from '../style/WeatherInfo.module.scss';
 
 const WeatherInfo = (props) => {
     let imgUrl;
-    if (props.weather.length === undefined) imgUrl = "http://openweathermap.org/img/w/" + props.weather.weather[0].icon + ".png";
+    if (props.weather.length === undefined) imgUrl = "https://openweathermap.org/img/w/" + props.weather.weather[0].icon + ".png";
     return (
-        <div>
+        <div className={style.contentWrapper}>
             {props.weather.length === undefined ?
                 <div className={style.content}>
                     <div className={style.tempWrapper}>
@@ -13,7 +13,7 @@ const WeatherInfo = (props) => {
                             <img src={imgUrl} />
                         </div>
                         <div className={style.temp}>
-                            {(props.weather.main.temp - 273.15).toFixed(2)}°С
+                            {props.weather.main.temp}°С
                             <div className={style.sky}>
                                 {props.weather.weather[0].main}
                             </div>
@@ -26,7 +26,7 @@ const WeatherInfo = (props) => {
                             <div className={style.humidity}>Humidity:</div>
                         </div>
                         <div className={style.values}>
-                            <div className={style.wind}>{props.weather.wind.speed} mph</div>
+                            <div className={style.wind}>{props.weather.wind.speed} m/s</div>
                             <div className={style.presure}>{props.weather.main.pressure} hPa</div>
                             <div className={style.humidity}>{props.weather.main.humidity} %</div>
                         </div>

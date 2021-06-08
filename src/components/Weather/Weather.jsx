@@ -1,5 +1,5 @@
 import React from 'react';
-import * as axios from 'axios';
+import axios from 'axios';
 import style from '../style/Weather.module.scss';
 import WeatherInfo from './WeatherInfo';
 import Header from './Header';
@@ -11,7 +11,7 @@ const Weather = () => {
 
     React.useEffect(() => {
         if (city.length > 0) {
-            axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=053f17f5b38f7007597d4a07ed2860e6`)
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=053f17f5b38f7007597d4a07ed2860e6`)
                 .then(result => {
                     console.log('success:', result.data)
                     setWeather(result.data);
@@ -37,6 +37,7 @@ const Weather = () => {
 
 export default Weather;
 
-// http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=053f17f5b38f7007597d4a07ed2860e6
 
-// http://api.openweathermap.org/data/2.5/weather?q=London&appid=053f17f5b38f7007597d4a07ed2860e6
+// bbc15013f006429cb70102721210706
+
+// OpenWeatherMapOpenWeatherMap

@@ -28,11 +28,31 @@ export default function CitySelector(props) {
     country = 'none'
   } else {
     country = props.country
-  } 
+  }
 
   return (
     <div>
-      <FormControl variant="outlined" className={classes.formControl}>
+      <FormControl className={classes.formControl}>
+        <InputLabel id="demo-simple-select-label" style={{ color: 'black', fontSize: '20px' }}>{country}</InputLabel>
+        <Select
+          style={{ color: 'black', fontSize: '26px' }}
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={city}
+          onChange={handleChange}
+        >
+          <MenuItem value={'London'}>London</MenuItem>
+          <MenuItem value={'Kyiv'}>Kyiv</MenuItem>
+          <MenuItem value={'Turka'}>Turka</MenuItem>
+          <MenuItem value={'Lviv'}>Lviv</MenuItem>
+          <MenuItem value={'Uzhgorod'}>Uzhgorod</MenuItem>
+          <MenuItem value={'Chop'}>Chop</MenuItem>
+          <MenuItem value={'Odessa'}>Odessa</MenuItem>
+          <MenuItem value={'Sambir'}>Sambir</MenuItem>
+        </Select>
+      </FormControl>
+
+      {/* <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel id="demo-simple-select-outlined-label" style={{ color: 'black', fontSize: '20px' }}>{country}</InputLabel>
         <Select style={{ color: 'black', fontSize: '26px' }}
           labelId="demo-simple-select-outlined-label"
@@ -53,7 +73,7 @@ export default function CitySelector(props) {
           <MenuItem value={'Odessa'}>Odessa</MenuItem>
           <MenuItem value={'Sambir'}>Sambir</MenuItem>
         </Select>
-      </FormControl>
+      </FormControl> */}
     </div>
   );
 }
